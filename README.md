@@ -47,8 +47,8 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
   - RDS (port 3306 from EC2 SG)
   - EFS (port 2049 from EC2 SG)
 
-![VPC Setup](Architecture/images/vpc-setup.png)  
-![Subnet Association](Architecture/images/public-route-subnetassociation.png)
+![VPC Setup](images/vpc-setup.png)  
+![Subnet Association](images/public-route-subnetassociation.png)
 
 ---
 
@@ -59,8 +59,8 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
 - Unlinked default site and created custom config at `/etc/nginx/sites-available/eleti.site`
 - Verified test HTML from EC2 public IP
 
-![EC2 Instance](Architecture/images/ec2-running.png)  
-![Public Webpage](Architecture/images/public-ipaddress.png)
+![EC2 Instance](images/ec2-running.png)  
+![Public Webpage](images/public-ipaddress.png)
 
 ---
 
@@ -70,7 +70,7 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
 - Installed `nfs-common`, mounted EFS at `/var/www/eleti.site`
 - Served static HTML (including CloudFront image) via NGINX
 
-![EFS Mount](Architecture/images/efs-mount.png)
+![EFS Mount](images/efs-mount.png)
 
 ---
 
@@ -80,9 +80,9 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
 - Connected from EC2 using `mysql-client`
 - Created **Read Replica** for HA
 
-![RDS Primary](Architecture/images/rds-primary.png)  
-![Read Replica](Architecture/images/read-replica.png)  
-![RDS Connection](Architecture/images/rds-connection.png)
+![RDS Primary](images/rds-primary.png)  
+![Read Replica](images/read-replica.png)  
+![RDS Connection](images/rds-connection.png)
 
 ---
 
@@ -93,8 +93,8 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
 - Created Auto Scaling Group across 2 AZs
 - Attached to ALB Target Group
 
-![Launch Template](Architecture/images/template-userdata.png)  
-![Auto Scaling Group](Architecture/images/auto-scalling-group.png)
+![Launch Template](images/template-userdata.png)  
+![Auto Scaling Group](images/auto-scalling-group.png)
 
 ---
 
@@ -104,7 +104,7 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
 - Forwarded traffic to Auto Scaling Group via Target Group
 - Verified DNS endpoint
 
-![ALB Setup](Architecture/images/app-alb.png)
+![ALB Setup](images/app-alb.png)
 
 ---
 
@@ -116,9 +116,9 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
 - Issued SSL certificate using ACM for custom domain
 - Created A-record in Route 53 → CloudFront DNS
 
-![CloudFront Origins](Architecture/images/origin-setups.png)  
-![CloudFront Behaviors](Architecture/images/behaviors-setup.png)  
-![Route53 Record](Architecture/images/route53-record.png)
+![CloudFront Origins](images/origin-setups.png)  
+![CloudFront Behaviors](images/behaviors-setup.png)  
+![Route53 Record](images/route53-record.png)
 
 ---
 
@@ -128,7 +128,7 @@ This project showcases a production-ready 3-tier architecture on AWS using EC2 (
 - Image assets delivered securely from S3 via CloudFront
 - End-to-end HTTPS via ACM + Route 53 DNS routing
 
-![Final DNS Output](Architecture/images/dns-output.png)
+![Final DNS Output](images/dns-output.png)
 
 ---
 
