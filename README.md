@@ -2,6 +2,8 @@
 
 This project showcases a production-ready 3-tier architecture on AWS using EC2 (NGINX), RDS (MySQL), and EFS. It integrates CloudFront, ALB, and Route 53 for scalability and content delivery.
 
+![Architecture Diagram](architecture-diagram/3-tier-architecture.png)
+
 ---
 
 ##  Architecture Overview
