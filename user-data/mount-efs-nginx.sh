@@ -2,8 +2,8 @@
 
 # Redirect all outputs (stdout and stderr) to log file
 exec > /var/log/user-data.log 2>&1
-set -e
-set -x
+set -e   # exit script immediately if any command fails
+set -x   # print each command to the log before running it
 
 # 1. Update and install required packages
 apt update -y && apt upgrade -y 
